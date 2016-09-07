@@ -1,0 +1,35 @@
+@charset "utf-8";
+// Reset and dependencies
+@import "../vendors/bootstrap/normalize";
+@import "compass/layout/sticky-footer";
+@include sticky-footer(80px);
+@import "../components/icons";
+@import "../layout/peronalPayHeader";
+@import "../layout/peronalPayContent";
+@import "../layout/installmentPay_cardInfo";
+@import "../layout/installmentPay_countBox";
+@import "../layout/peronalPayFooter";
+@import "../vendors/validform";
+@import "../layout/payPrompt_content";
+
+
+body{
+    color: #6B6B6B;
+    background-image:url("../../img/backgrpund.png");
+    text-align: center;
+}
+#root{
+    text-align: left;
+}
+.container{
+    width:870px;
+    margin:auto;
+    font-family: Microsoft YaHei,SimSun;
+    font-size: 14px;
+}
+.float-l{
+    float: left;
+}
+.float-r{  
+    float: right;
+}

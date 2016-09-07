@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import "../helpers/peronalPayVariables";
+@import "../mixins/pngSprite";
+%font-s22{
+    font-size: 22px;
+}
+%font-s20{
+    font-size: 20px;
+}
+%font-s18{
+    font-size: 18px;
+}
+%font-s16{
+    font-size: 16px;
+}
+%font-s14{
+    font-size: 14px;
+}
+
+.header{
+    padding: 20px 0 10px 0;
+    border-bottom: 3px solid #01476B;
+    height: 50px;
+    box-sizing: content-box;
+}
+
+.header div{
+    display: inline-block;
+    
+    vertical-align: text-bottom;
+    color: $fontColor1;
+}
+
+.header>div:first-child{
+//    width: 44px;
+    height: 50px;
+    @extend %font-s14;
+}
+.header>.float-r{
+    width: 650px;
+}
+.icon-cardLogo{
+    width: 120px;
+    height: 44px;
+    @include inline-block-valing-m;
+}
+
+.header .line{
+    height: 30px;
+    width: 1px;
+    float: right;
+    margin-top: 14px;
+//    border-right: 1px solid #ccc;
+}
+.header a{
+    text-decoration: none;
+}
+
+.header .float-r{
+    margin-top: 10px;
+}
+.header>.float-r{
+    width: 77%;
+    border-left: 1px solid #ccc;
+    padding-left: 35px;
+    margin-top: 16px;
+}
+.icon-wxtb{
+    width:20px;
+    height:20px;
+    @include inline-block-valing-m;
+}
+.header a:hover .QR-img {
+    display: block;
+}
+.guanzuwei{
+    cursor: pointer;
+}
+.header a .QR-img {
+    width: 84px;
+    height: 84px;
+    padding: 4px;
+    background: #fff;
+    position: absolute;
+    top: 65px;
+    z-index: 9999;
+    margin-left: 170px;
+}
+.header a{
+
+}
+
+.icon-wechat{
+    width: 84px;
+    height: 84px;
+    @include inline-block-valing-m;
+}
+    
+.margin-l-r10{
+    margin: 0px 10px;
+}
+.font-s22{
+    @extend %font-s22;
+}
+

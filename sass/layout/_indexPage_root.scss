@@ -1,0 +1,46 @@
+body {
+    overflow: hidden;
+}
+
+ul {
+    margin: 0px;
+}
+.avatar {
+    width: 348px;
+    height: 506px;
+    top: 150px;
+    left: 163px;
+    background: url('../../img/my/step1.gif') no-repeat;
+    background-size: 360px;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='file:///E:/work/allInPay/img/my/avatar_normal.png',
+    sizingMethod='scale');
+    position: absolute;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.avatar:hover {
+    background: url('../../img/my/avatar_reaction.png') no-repeat;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src='file:///E:/work/allInPay/img/my/avatar_reaction.png',
+    sizingMethod='scale');
+    background-size: cover
+}
+
+
+/* WXGA+ */
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    body {
+        width: 1440px;
+        height: 900px
+    }
+    .page {
+        width: 1440px;
+        height: 900px
+    }
+}

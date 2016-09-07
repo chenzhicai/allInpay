@@ -1,0 +1,333 @@
+@charset "utf-8";
+@import "compass/css3";
+
+@import "../vendors/bootstrap/variables";
+@import "../vendors/bootstrap/mixins";
+@import "../vendors/bootstrap/modals";
+@import "../mixins/pngSprite";
+$border-color: #A6C0D6;
+$cardInfo-fontSize: 16px;
+$title-fontSize: 18px;
+$title-color:#00456c;
+$button-backgroud:#0068b7;
+%titleFont{
+    font-weight:normal;
+    font-size: $title-fontSize;
+    color:$title-color;
+}
+%button{
+    background-color: #fff;
+    border-width: 1px;
+    border-color: $button-backgroud;
+}
+%buttonHover{
+    background-color: $button-backgroud;
+    color:#fff;
+}
+.content>div:first-child{
+    height: 400px;
+}
+
+.content .float-l{
+    width:32%;
+}
+.content .float-r>div{
+    background-color: #fff;
+}
+.content .panel,.nav-tabs a,.content-tishu{
+    background-color: #fff;
+}
+.panel{
+    padding: 0 10px;
+    border: 1px solid #A6C0D6;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    @include border-radius(4px, 4px);
+}
+.panel-heading{
+    border-bottom: 1px solid $border-color;
+}
+.panel-title{
+    margin: 10px 0px;
+    @extend %titleFont;
+}
+.panel-body{
+    padding: 20px 0px;
+}
+.panel-body div{
+    line-height: 30px;
+    font-size: 16px;
+}
+.panel-body span{
+    margin-right: 10px;
+}
+
+.letter-s{
+    letter-spacing: 7px;
+}
+#orderNum{
+    margin-left: -7px;
+}
+#totalNum{
+    color:#ff0000;
+}
+.icon-banner{
+    width: 278px;
+    height: 126px;
+    @include inline-block-valing-m;
+}
+
+.content .float-r{
+    width:66%;
+    float:right;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color:$title-color;
+    background:#fff;
+    border: 1px solid $border-color;
+    @include border-top-right-radius(4px);
+    @include border-top-left-radius(4px);
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.nav-tabs > li > a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    @extend %titleFont;
+    margin-bottom: -1px;
+}
+
+.nav-tabs {
+    margin-top: 14px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    padding-left: 0;
+    list-style: none;
+    background-image: url("../../img/backgrpund.png");
+
+}
+.nav-tabs > li {
+    margin-bottom: -1px;  
+}
+.tab-content{
+    border: 1px solid $border-color;
+//    border-top-width: 0px;
+    padding: 10px;
+    padding-bottom: 26px;
+    @include border-top-right-radius(4px);
+    @include border-bottom-right-radius(4px);
+    @include border-bottom-left-radius(4px);
+    margin-top: -1px;
+    height: 298px;
+}
+
+.dingdan_icon{
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    margin-bottom: -2px;
+}
+.icon-dingdan{
+    width: 16px;
+    height: 17px;
+    margin-bottom: 5px;
+    @include inline-block-valing-m;
+
+}
+
+/* 通联卡信息填写 begin*/
+.cardInfo-header{
+    line-height: 30px;
+    border-bottom: 1px solid $border-color;
+    padding-left: 15%;
+    padding-bottom: 8px;
+}
+.cardInfo{
+    padding-left: 10%;
+    padding-top: 10px;
+    font-size: $cardInfo-fontSize;
+    height: 218px;
+}
+.tishu-color9{
+    color:#999999;
+}
+#cardInfo{
+    tr{
+        line-height: 55px;
+        vertical-align: baseline;
+    }
+    tr.mh{
+        height: 40px;
+    }
+}
+
+/* 通联卡信息填写 end*/
+
+#paySucceed{
+    margin-top: 85px;
+}
+
+#zhifuzhongtishu{
+    line-height: 230px;
+    vertical-align: middle;
+}
+
+#zhifuzhongtishu>p,#paySucceed>p{
+    text-align: center
+}
+.font-s20{
+    font-size: 20px;
+}
+.icon-chenggong,.icon-fail{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 3px;
+    @include inline-block-valing-m;
+}
+#zhifuzhongtishu img{
+    height:20px;
+}
+.cardInfo-header>span{
+    margin: 0 10px;
+    font-size: $cardInfo-fontSize;
+    cursor: pointer;
+}
+.cardInfo>p{
+    line-height: 32px;
+}
+.cardInfo>p:last-child{
+    padding-left: 125px;
+}
+.cardInfo>p>span{
+    display: inline-block;
+    width: 125px;
+    text-align: right;
+}
+#selectBalance{
+    width: 80px;
+    color: #3065E0;
+    display: none;
+    line-height: 20px;
+    border: 0px;
+    background: #fff;
+}
+#selectBalance:hover{
+    @extend %buttonHover;
+}
+.cardInfo input{
+    width: 190px;
+
+}
+#verifyCode{
+    width: 90px;
+}
+#captchaImg{
+    width: 100px;
+    height: 33px;
+    cursor: pointer;
+    -webkit-transform: translate(0px,10px);
+    -moz-transform: translate(0px,10px);
+    transform: translate(0px,10px);
+}
+.codeimgParet{
+    width: 100px;
+    display: inline-block;
+}
+#nextCodeImg{
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 5px;
+}
+.need{
+    font-size: 18px;
+    vertical-align: middle;
+    padding-top: 2px;
+    display: inline-block;
+    color: #ff0000;
+}
+.badge{
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 6px 3px 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #777777;
+    border-radius: 16px;
+    font-style: italic;
+}
+
+.badge.checked{
+    background-color: #3065E0;
+}
+
+.content ol{
+    color: #666666;
+}
+#cardInfo > div:last-child{
+    text-align: center;
+}
+.paydiv{
+    text-align: center;
+}
+#sureButton{
+    @include border-radius(4px, 4px);
+    line-height: 25px;
+    width: 90px;
+    @extend %button;
+    margin-left: -80px;
+    margin-top: 20px;
+}
+#sureButton:hover{
+    @extend %buttonHover;
+}
+#aboutMoal .modal-body{
+    text-align: center;
+    margin:auto;
+}
+.modal-header{
+    background-color: #eeeeee;
+}
+.modal-header button{
+    display: inline-block;
+    float: right;
+}
+.modal-footer button{
+    @extend %button;
+    border-color: #ccc;
+    padding: 2px 10px;
+ //    @include border-radius(4px, 4px);
+}
+.modal-footer button:hover{
+    @extend %buttonHover;
+}
+
+.content-tishu{
+    border: 1px solid $border-color;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0 5px;
+    @include border-radius(4px, 4px);
+}
+.content-tishu>p{
+    @extend %titleFont;
+} 
+
+.icon-tishu{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    @include inline-block-valing-m;
+}   
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}

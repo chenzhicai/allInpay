@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="../js/libs/jquery-compat-3.0.0-alpha1.js"></script>
+</head>
+<body>
+    <label>test</label><input id="user-phone" type="text">
+</body>
+
+<script type="text/javascript">
+
+$(document).ready(function  () {
+    $("input").bind("keyup",function  () {
+        if(event.keyCode != 8){
+           spacePhoneNum(); 
+       }else{
+            deleteSpace("#user-phone");
+       }
+        
+    })
+});
+    /* 间隔手机号 */
+function spacePhoneNum() {
+    $userPhone = $("#user-phone"),
+        userPhoneVal = $userPhone.val(),
+        needPhoneVal = $userPhone.val().replace(/ /g, "");
+    if (needPhoneVal.length > 3 && needPhoneVal.length < 7) {
+        userPhoneVal = needPhoneVal.substr(0, 3) + "  " + needPhoneVal.substr(3);
+
+    } else if (needPhoneVal.length > 7) {
+        userPhoneVal = needPhoneVal.substr(0, 3) + "  " + needPhoneVal.substr(3, 4) + "  " + needPhoneVal.substr(7);
+    }
+    $userPhone.val(userPhoneVal);
+}
+
+function deleteSpace (selector) {
+    $selector = $(selector);
+    selectorValue = $selector.val();
+    while(selectorValue[selectorValue.length-1] == " "){
+        selectorValue = selectorValue.substr(0,selectorValue.length-1)
+    } 
+    $(selector).val(selectorValue);
+}
+</script>
+</html>

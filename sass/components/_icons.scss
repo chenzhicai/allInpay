@@ -1,0 +1,7 @@
+@charset "utf-8";
+$icon-spacing: 5px;
+@import "compass/utilities/sprites";
+@import "icon/*.png";
+
+
+@include all-icon-sprites();

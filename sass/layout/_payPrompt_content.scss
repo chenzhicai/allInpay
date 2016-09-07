@@ -1,0 +1,24 @@
+#tishicuowu {
+    background: #fff;
+    border-color: rgba(204, 204, 204, 0.2);
+    border: 1px solid rgba(204, 204, 204, 0.4);
+    margin-top: 20px;
+    height: 210px;
+    > div {
+        padding-top: 40px;
+        vertical-align: super;
+        text-align: center;
+        vertical-align: top;
+        >p:last-child{
+            font-size: 18px;
+        }
+    }
+    .maincuowu {
+        display: inline-block;
+        font-size: 22px;
+    }
+    img{
+        vertical-align: bottom;
+        margin-right: 20px;
+    }
+}

@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "../vendors/bootstrap/normalize";
+@import "../layout/indexPage_root";
+@import "../vendors/csshake/csshake";
+@import "../layout/indexPage_watch";
+body {
+    background: url('../../img/my/bg_home.jpg') no-repeat;
+    background-size: cover;
+    display: block !important;
+    position: relative;
+    cursor: url('../../img/my/cursor.png'), url('../images/my/cursor.cur'), default
+}
+

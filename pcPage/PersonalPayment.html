@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>通联支付系统</title>
+    <link href="../css/page/peronalPay.css" rel="stylesheet">
+    <style type="text/css">
+    #yujizaitu {
+        width: 0px;
+        background-image: url("../img/icon-s4e571f86be.png");
+        /*        background-image:url("img/backgrpund.png"); */
+    }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="icon-backgrpund">
+    <div id="root" class="container">
+        <div class="header">
+            <div class="float-l">
+                <span class="icon-cardLogo"></span>
+            </div>
+            <div class="float-r">
+                <div class="font-s22 float-l">个人网上支付系统</div>
+                <div class="float-r"><a href="http://www.ulinkpay.com/">通联商务官方网站</a><span class="margin-l-r10">|</span><a class="guanzuwei"><span class="icon-wxtb"></span>关注公众号，在线提问<span class="QR-img hide"><span class="icon-wechat"></span></span></a></div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <div class="float-l">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><span class="dingdan_icon"><span class="icon-dingdan"></span></span>订单信息</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <span>订单总额 :</span><span id="totalNum">285.00元</span>
+                            </div>
+                            <div>
+                                <span>支付货币 :</span><span>人民币</span>
+                            </div>
+                            <div>
+                                <span>商品名称 :</span><span id="commodityName">小通商城</span>
+                            </div>
+                            <div>
+                                <span class="letter-s">订单号:</span><span id="orderNum">0123456789012345</span>
+                            </div>
+                            <div>
+                                <span>订单日期 :</span><span id="payDate">2016-03-18 08:08:18</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="icon-banner"></span>
+                    </div>
+                </div>
+                <div class="float-r">
+                    <div>
+                        <ul class="nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">通联卡支付</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="cardInfo-header">
+                                    <span> <span class="badge checked">1</span> 填写信息</span> > <span> <span class="badge">2</span> 完成</span>
+                                </div>
+                                <div id="cardInfo" class="cardInfo demoform">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="need">*</td>
+                                                <td>通联卡号：</td>
+                                                <td>
+                                                    <input id="cardNum" class="tishu-color9 inputNum" type="text" placeholder="19位卡号" datatype="n19-19" errormsg="请通联卡19位数字">
+                                                </td>
+                                                <td>
+                                                    <div class="Validform_checktip">请通联卡19位数字。</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="need">*</td>
+                                                <td>密码：</td>
+                                                <td>
+                                                    <input id="cardPassword" type="password" datatype="n6-6" errormsg="请输入密码6位" class="tishu-color9 inputNum" placeholder="6位密码">
+                                                </td>
+                                                <td>
+                                                    <div class="Validform_checktip">请输入密码6位</div>
+                                                </td>
+                                            </tr>
+                                            <tr class="mh">
+                                                <!--</tr>
+                                            <tr> -->
+                                                <td class="need">*</td>
+                                                <td>图形验证码：</td>
+                                                <td>
+                                                    <input id="verifyCode" type="text" placeholder="请输入验证码">
+                                                    <div class="codeimgParet"><img id="captchaImg" src="https://www.oschina.net/action/user/captcha"></div>
+                                                </td>
+                                                <td>
+                                                    <div id="yzmti" class="Validform_checktip">点图片刷新验证码</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="paydiv">
+                                        <button id="sureButton">确认支付</button>
+                                    </div>
+                                </div>
+                                <div id="zhifuzhongtishu" class="hide">
+                                    <p class="font-s20">支付信息提交中<img src="../img/zfzts1.gif" alt="支付中"></p>
+                                </div>
+                                <div id="paySucceed" class="hide">
+                                    <p class="font-s20">
+                                        <span class="icon-chenggong"></span> <span id="payFinally">您已成功付款</span>
+                                        <span id="paySucceedNum">285.00<span>元</span></span>
+                                    </p>
+                                    <p class="tishu-color9">该页面将在<span id="countdown10">10</span>秒后自动跳转到商城首页</p>
+                                    <p><a href="#">返回商城</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-tishu">
+                <p><span><span class="icon-tishu"></span></span><span>支付小贴士</span></p>
+                <ol>
+                    <li>无需注册网银即可使用卡密支付，方便快捷。</li>
+                    <li>您正在进行网络支付交易，为保证您的资金安全，请认真核对交易信息，谨防诈骗。</li>
+                    <li>请不要在网吧等公共场所使用本功能，妥善保管好您的卡号和密码，避免被他人冒用。</li>
+                    <li>通联商务提供安全可靠的网上支付服务，一切由于商品质量、送货服务等引起的争议均有客户及商户自行协调解决。</li>
+                    <li>客服服务热线：4009-216-118 ( 工作日 9:00 - 17:00 )</li>
+                </ol>
+            </div>
+        </div>
+        <div id="yujizaitu"></div>
+        <div id="root_footer"></div>
+    </div>
+    <div id="footer">
+        <div><span>公司地址：上海市浦东新区杨高南路799号陆家嘴世纪金融广场3号楼8层</span></div>
+        <p><span>版权所有：通联商务服务有限公司</span><span>沪ICP备13043030号-1</span></p>
+    </div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+    <div id="aboutMoal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <script type="text/javascript" src="../js/libs/jquery-compat-3.0.0-alpha1.js"></script>
+    <script type="text/javascript" src="../js/libs/bootstrap_pay.min.js"></script>
+    <script type="text/javascript" src="../js/base/require.js"></script>
+    <script type="text/javascript" src="../js/libs/Validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="../js/views/paymentView.js"></script>
+    <script type="text/javascript" src="../js/componests/commonMethod.js"></script>
+    <script type="text/javascript" src="../js/controllers/payment.js"></script>
+</body>
+
+</html>

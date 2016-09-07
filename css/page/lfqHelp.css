@@ -1,0 +1,89 @@
+/* line 1, ../../sass/layout/_lfqHelp-root.scss */
+.wrap-box {
+  background: #fff;
+  padding: 20px;
+}
+
+/* line 6, ../../sass/layout/_lfqHelp-root.scss */
+.tr {
+  text-align: right;
+}
+
+/* line 10, ../../sass/layout/_lfqHelp-root.scss */
+.right_box {
+  padding: 0px;
+}
+/* line 12, ../../sass/layout/_lfqHelp-root.scss */
+.right_box .tr:first-child {
+  margin-right: 16px;
+}
+
+/* line 17, ../../sass/layout/_lfqHelp-root.scss */
+.strip {
+  margin: 30px 0 10px 0;
+}
+/* line 19, ../../sass/layout/_lfqHelp-root.scss */
+.strip h4 {
+  margin: 20px 0 10px 0;
+}
+/* line 22, ../../sass/layout/_lfqHelp-root.scss */
+.strip p {
+  height: 4.5em;
+}
+/* line 25, ../../sass/layout/_lfqHelp-root.scss */
+.strip #cardNum > span {
+  margin-left: 10px;
+}
+/* line 28, ../../sass/layout/_lfqHelp-root.scss */
+.strip img {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+/* line 32, ../../sass/layout/_lfqHelp-root.scss */
+.strip .suolutu {
+  width: 45px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 39, ../../sass/layout/_lfqHelp-root.scss */
+.strip .clause > p:nth-child(1) .suolutu {
+  background: url("../images/lfqhelp/suoluetu-1.png") no-repeat left;
+}
+/* line 42, ../../sass/layout/_lfqHelp-root.scss */
+.strip .clause > p:nth-child(2) .suolutu {
+  background: url("../images/lfqhelp/suoluetu-2.png") no-repeat left;
+}
+/* line 45, ../../sass/layout/_lfqHelp-root.scss */
+.strip .clause > p:nth-child(3) .suolutu {
+  background: url("../images/lfqhelp/suoluetu-3.png") no-repeat left;
+}
+/* line 48, ../../sass/layout/_lfqHelp-root.scss */
+.strip .suolutu img {
+  -webkit-transform: translate(50%, 50%);
+  -moz-transform: translate(50%, 50%);
+  transform: translate(50%, 50%);
+}
+
+/* line 55, ../../sass/layout/_lfqHelp-root.scss */
+.table-cell {
+  line-height: 30px;
+  font-size: 18px;
+}
+/* line 58, ../../sass/layout/_lfqHelp-root.scss */
+.table-cell .title {
+  display: inline-block;
+  width: 90px;
+  text-justify: inter-ideograph;
+  text-align: justify;
+  text-align-last: justify;
+  text-justify-last: inter-ideograph;
+}
+
+/* line 68, ../../sass/layout/_lfqHelp-root.scss */
+.bot {
+  padding: 10px 0px;
+}
+
+/*# sourceMappingURL=lfqHelp.css.map */

@@ -1,0 +1,71 @@
+.wrap-box {
+    background: #fff;
+    padding: 20px;
+}
+
+.tr {
+    text-align: right;
+}
+
+.right_box {
+    padding: 0px;
+    .tr:first-child {
+        margin-right: 16px;
+    }
+}
+
+.strip {
+    margin: 30px 0 10px 0;
+    h4 {
+        margin: 20px 0 10px 0;
+    }
+    p {
+        height: 4.5em;
+    }
+    #cardNum>span {
+        margin-left: 10px;
+    }
+    img {
+        vertical-align: middle;
+        margin-left: 10px;
+    }
+    .suolutu {
+        width: 45px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .clause>p:nth-child(1) .suolutu {
+        background: url("../images/lfqhelp/suoluetu-1.png") no-repeat left;
+    }
+    .clause>p:nth-child(2) .suolutu {
+        background: url("../images/lfqhelp/suoluetu-2.png") no-repeat left;
+    }
+    .clause>p:nth-child(3) .suolutu {
+        background: url("../images/lfqhelp/suoluetu-3.png") no-repeat left;
+    }
+    .suolutu img {
+        -webkit-transform: translate(50%, 50%);
+        -moz-transform: translate(50%, 50%);
+        transform: translate(50%, 50%);
+    }
+}
+
+.table-cell {
+    line-height: 30px;
+    font-size: 18px;
+    .title {
+        display:inline-block;
+        width: 90px;
+        text-justify: inter-ideograph;
+        text-align: justify;
+        text-align-last: justify;
+        text-justify-last: inter-ideograph;
+    }
+}
+
+.bot {
+    
+    padding: 10px 0px;
+}

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>企业管理</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link href="../css/page/main.css" type="text/css" rel="stylesheet">
+    <link href="../css/page/lfqHelp.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../js/libs/jquery-compat-3.0.0-alpha1.js"></script>
+</head>
+
+<body>
+    <!--header start-->
+    <div class="top_box" style="height: 40px;">
+        <div class="wrap-box2">
+            <div class="top_bar fr">
+                <!-- <p class="service fr">客户服务热线：<strong>4009-216-118</strong>|</p> -->
+                <p class="login_bar fr">您好，企业<a href="/welfarecorp/j_spring_security_logout" style="padding-left: 20px;">退出</a>
+                    <!-- | -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+    <!--nav start-->
+    <!--nav start-->
+    <div class="nav_box">
+        <div class="nav wrap-box2">
+            <ul>
+                <li><a href="http://wxtest.ulinkpay.com/welfarecorp/main.jsp">首页</a></li>
+                <!-- 小通分期商户 -->
+                <li><a href="http://wxtest.ulinkpay.com//welfarecorp/lfq/TradeSum/index.do?nav=lfqSum" class="">小通分期</a></li>
+                <li><a href="http://wxtest.ulinkpay.com/welfarecorp/lfq/TradeQuery/index.do?nav=trade" class="">交易查询</a></li>
+                <li><a href="http://wxtest.ulinkpay.com/welfarecorp/setting/Setting/toSetting.do?nav=setting" class="">用户设置</a></li>
+                <li><a href="http://wxtest.ulinkpay.com//welfarecorp/help/help.jsp?nav=help" class="cur">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--主体内容区块 start-->
+    <div class="wrap-box pb30">
+        <!--右侧主体内容 start-->
+        <div class="right_box" style="width: 100%;">
+            <!-- 小通分期商户 -->
+            <div class="tr">客户服务热线：4009-216-118(工作日：9:00-17:00)</div>
+            <hr style="border-top: 2px solid #185598;">
+            <div class="strip">
+                <h4>退货打款专用账户</h4>
+                <div>
+                    <div class="table-cell">账号名称：<span>通联商务服务有限公司</span></div>
+                    <div class="table-cell">银行名称：<span>中国建设银行南昌银都分理处</span></div>
+                    <div class="table-cell">银行账户：<span id="cardNum">3605<span>0153</span><span>0172</span><span>0000</span><span>0039</span></span>
+                    </div>
+                    <div class="table-cell">联行号：<span>105421005484</span></div>
+                </div>
+            </div>
+            <div class="strip">
+                <h4>商户如何退款？</h4>
+                <div class="clause">
+                    <p>1、找到对应该笔POS签购单，找到对应该交易的订单号：(点击缩略图)<span data-start="0" class="suolutu"><img src="../img/lfqhelp/fangda_icon.png"></span></p>
+                    <p>2、在商户平台点击“交易查询”按钮，输入订单号，点击“查询”按钮：(点击缩略图)<span data-start="1" class="suolutu"><img src="../img/lfqhelp/fangda_icon.png"></span></span>
+                    </p>
+                    <p>3、点击“详情”按钮，在交易的详细信息中查看退货打款金额，通过网银将商户打款金额打入通联商户的账户(一笔退货对应一笔网银打款)同时在网银打款时，<span>备注输入每笔打款对应的订单号。</span>：(点击缩略图<span data-start="2" class="suolutu"><img src="../img/lfqhelp/fangda_icon.png"></span></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--右侧主体内容 end-->
+    </div>
+    <!--主体内容区块 end-->
+    <div class="clear"></div>
+    <div class="bot">
+        <div class="wrap-box bcgf5" style="background-color: #efefef;padding:0px">
+            <div class="copyright">
+                <p>版权所有：通联商务服务有限公司&nbsp;&nbsp;&nbsp;&nbsp;沪ICP备13043030号-1</p>
+                <p>公司地址：上海市浦东新区杨高南路799号陆家嘴世纪金融广场3号楼8层</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $(".help_list li h4").click(function() {
+            var stat = $(this).parent().attr("class");
+            //console.log(stat);
+            if (stat == 'open') {
+                $(this).parent().removeClass("open");
+            } else {
+                $(this).parent().addClass("open");
+            }
+        });
+    });
+    </script>
+    <div style="position: absolute; top: -1970px; left: -1970px;">
+        <iframe style="width: 186px; height: 198px;" src="" frameborder="0" border="0" scrolling="no"></iframe>
+    </div>
+    <script type="text/javascript" src="../js/componests/layer.js"></script>
+    <script type="text/javascript" src="../js/controllers/helplfq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+#countBox {
+    padding-top: 30px;
+    font-size: 16px;
+    .row {
+        padding: 8px 0px;
+    }
+    .title {
+        display: inline-block;
+        width: 40%;
+        text-align: right;
+        padding-right: 10px;
+    }
+    select {
+        width: 106px;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .info {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        background-color: #e8e8e8;
+        padding: 5px 3px;
+        border: 1px solid #bfbfbf;
+    }
+    .nextBox{
+        text-align: center;
+        margin-top: 15px;
+        button{
+            padding: 3px 11px;
+        }
+    }
+}
