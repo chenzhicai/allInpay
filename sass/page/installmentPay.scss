@@ -11,25 +11,97 @@
 @import "../layout/peronalPayFooter";
 @import "../vendors/validform";
 @import "../layout/payPrompt_content";
-
-
-body{
+body {
     color: #6B6B6B;
-    background-image:url("../../img/backgrpund.png");
+    background-image: url("../../img/backgrpund.png");
     text-align: center;
 }
-#root{
+
+#root {
     text-align: left;
+    min-width: 870px;
 }
-.container{
-    width:870px;
-    margin:auto;
-    font-family: Microsoft YaHei,SimSun;
+
+.container {
+    width: 870px;
+    margin: auto;
+    font-family: Microsoft YaHei, SimSun;
     font-size: 14px;
 }
-.float-l{
+
+.float-l {
     float: left;
 }
-.float-r{  
+
+.float-r {
     float: right;
+}
+
+.content {
+    .float-l {
+        width: 38%;
+    }
+    .float-r {
+        width: 61%;
+    }
+}
+
+.panel-body div {
+    line-height: 33px;
+}
+
+.icon-banner {
+    background-image: url(../images/banner.png);
+    width: 100%;
+    background-image: url(../images/banner.png);
+    background-size: 100%;
+    height: 146px;
+    margin-top: 2px;
+}
+
+#loding .modal-content {
+    width: 0px;
+    height: 0px;
+    p {
+        color: #fff;
+    }
+}
+
+#toFill,
+#sureButton {
+    background-color: #E4EFF6;
+    border: 1px solid #B1D3EB;
+    /* border-right: 1px solid #B1D3EB; */
+    border-width: 1px;
+    width: 90px;
+    display: inline-block;
+    padding: 2px 5px;
+    -moz-border-radius: 4px / 4px;
+    -webkit-border-radius: 4px 4px;
+    border-radius: 4px / 4px;
+    &:hover {
+        background-color: #98c2e6;
+        color: #fff;
+    }
+}
+
+#toFill {
+    margin-left: 82px;
+}
+
+#loding {
+    .modal-dialog {
+        margin-left: 0px;
+    }
+    .modal-body {
+        width: 150px;
+        .p {
+            margin-top: 20px;
+            color: #fff;
+        }
+    }
+}
+
+.Validform_wrong {
+    padding-left: 0px;
 }

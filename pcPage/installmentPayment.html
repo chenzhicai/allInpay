@@ -33,7 +33,7 @@
             </div>
             <div class="float-r">
                 <div class="font-s22 float-l">个人网上支付系统</div>
-                <div class="float-r"><a href="http://www.ulinkpay.com/">通联商务官方网站</a><span class="margin-l-r10">|</span><a class="guanzuwei"><span class="icon-wxtb"></span>关注公众号，在线提问<span class="QR-img hide"><span class="icon-wechat"></span></span></a></div>
+                <div class="float-r"><a href="http://www.ulinkpay.com/">通联商务官方网站</a><span class="margin-l-r10">|</span><a class="guanzuwei"><span class="icon-wxtb"></span>关注公众号，在线提问<span class="QR-img"><span class="icon-wechat"></span></span></a></div>
             </div>
         </div>
         <div class="content">
@@ -190,9 +190,7 @@
                                     <button id="sureButton">确认支付</button>
                                 </div>
                             </div>
-                            <div id="zhifuzhongtishu" class="hide">
-                                <p class="font-s20">支付信息提交中<img src="../img/zfzts1.gif" alt="支付中"></p>
-                            </div>
+                            
                             <div id="paySucceed" class="hide">
                                 <p class="font-s20">
                                     <span class="icon-chenggong"></span> <span id="payFinally">您已成功付款</span>
@@ -248,7 +246,21 @@
         </div>
         <!-- /.modal-dialog -->
     </div>
+    <div id="loding" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <img src="../img/loding.gif">
+                </div>
+                
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
     <!-- /.modal -->
+    <script type="text/javascript" src="../js/urlVar.js"></script>
     <script type="text/javascript" src="../js/libs/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="../js/libs/bootstrap4.0.0.js"></script>
     <script type="text/javascript" src="../js/componests/bootstrap-datetimepicker.js"></script>

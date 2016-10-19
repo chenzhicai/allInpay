@@ -1,0 +1,38 @@
+.register_form{width:800px; overflow:hidden; margin:0 auto}
+.register_form input{ border-radius:0}
+.form_list{width:100%;float:left; line-height:44px; padding:10px 0}
+.form_list .label{width:175px; margin-right:8px; text-align:right;float:left}
+.form_list .label span{color:#e70000;padding-right:4px}
+.form_list .input_box{ width:300px; float:left; position:relative; margin-right:10px}
+.input_box .input{width:282px}
+.select{width:298px;border:1px #d0d0d0 solid;height:44px;}
+.tip_box{width:260px;padding-top:12px;padding-left:16px;float:left}
+
+.input_box .input_file{width:300px;height:48px;position:absolute;top:0;left:0; opacity:0;-webkit-opacity:0;-moz-opacity:0; filter:alpha(opacity=0)}
+.file_name{width:242px; padding:0 5px 0 10px; background:#1899e2;color:#fff;position:absolute;left:310px;top:0}
+.file_name a{ width:28px;height:28px; background:url(../images/close_btn1.gif) no-repeat;display:inline-block; margin-top:6px; float:right}
+.file_name span{float:left}
+a.upload{ background:#91a8c2;color:#fff;width:78px; text-align:center;display:inline-block; float:right}
+
+.tips,
+.checkbox{padding-left:183px}
+.checkbox{padding-bottom:10px}
+.checkbox input{margin-right:6px}
+.btn_box{padding-left:183px;padding-top:20px; overflow:hidden}
+.btn_box input{float:left;margin-right:20px}
+.btn_box .gary_btn{background:#91a8c2;color:#fff}
+
+.password_set{padding-left:90px;font-size:16px}
+
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip{line-height:20px;height:20px;overflow:hidden;color:#999;font-size:12px;}
+.Validform_right{color:#71b83d;padding-left:20px;background:url(../images/icon_correct.gif) no-repeat left center}
+.Validform_wrong{color:red;padding-left:20px;white-space:nowrap;background:url(../images/icon_error.gif) no-repeat left center;}
+.Validform_loading{padding-left:20px;background:url(../images/onLoad.gif) no-repeat left center}
+.Validform_error{border:1px #ff6600 solid}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left}

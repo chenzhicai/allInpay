@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "../mixins/pngSprite";
+.header {
+    height: 90px;
+    padding: 20px 30px 10px 30px;
+    background-image: url(../../images/hbackground.png);
+    >.float-r{
+        width: 85%;
+        .float-r{
+            float:right;
+        }
+    }
+    .float-l,
+    .float-r {
+        display: inline-block;
+    }
+    .float-r{
+        vertical-align: text-top;
+    }
+    .h_big {
+        margin-left: 40px;
+        font-size: 30px;
+        color: #fff;
+    }
+    .h_mbig{
+        color: #69A1f7;
+        font-size: 22px;
+    }
+}
+
+
+.icon-cardLogo {
+    width: 120px;
+    height: 44px;
+    @include inline-block-valing-m;
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- saved from url=(0184)http://wxtest.ulinkpay.com/assetbm/installment/pcinctallment/installmentPayment.jsp?orderId=LwLpFWLhDeYuwl8QKY%2F8OLdRh4QqqfwL%0D%0A&sign=NGNjOTA2N2UzOGQwYTgwYTdjMWIzYWUyZjIxNDVjNmI%3D -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+    var ctx = "/assetbm";
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>通联支付系统</title>
+    <link type="text/css" href="./installmentPayment2_files/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="./installmentPayment2_files/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="../css/page/installmentPay2.css" rel="stylesheet">
+    <style type="text/css">
+    #yujizaitu {
+        width: 0px;
+        background-image: url("/assetbm/installment/images/pcimg/icon-s4e571f86be.png");
+        /*        background-image:url("img/backgrpund.png"); */
+    }
+    </style>
+    <script type="text/javascript">
+    window.BASE_URL = "/assetbm";
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="icon-backgrpund" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKEAYAAADdohP+AAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAKAAAACgBOpnblAAACE0lEQVQoz0XSvyv8ARzH8efrfR8ll4Uuw20s5yLEaJVSBqPFP8BgYLbZpRgo9VmunLoMFpcy2PwIXRbDKSldSdwly31e3+mbv+Hx0Ff6lX6ltvLKKw+hUAh87WtfQzaWjWVjEIdxGIfALrvsQpZkSZZArMZqrIJLLrkEalfb1XbV1prWtAZuuukm+MlPfoKoRS1q4H73ux+444474J133oEZZpgBlVRSCULHOtYxkCNHDmjQoAEUKVKEbDPbzDbBeeedB/e4xz2gFa1oBZhgggnwtre9DeosdhY7izYFChSg2+q2ui2IcpSjDAwwwABwww03gBACPetZz+CGG24ACyywAPo+/T79PrX1q1/9Avvssw8e8YhHQKMa1SioqKKK4GUvexn44IMPYJxxxoFeeumFUJ/61Aee9KQnQTva0Q7kznJnuTPQnva0B06cOIH/eLrVrW6BN954A6aZZhrUfmm/tF9sD3nIQxAncRInwBRTTEG32W12m6BEiRLQgx70AFxyySWwxBJLwDzzzEPoSEc6AqpUqULWylpZC7KNbCPbgBiMwRgEVVRRBdhii60/RH3qU5/gggsuQDh16hR0pStdgc51rnPQq171CkqVKoW4iIu4ANZZZx1UV131v38xF3MxB+rMdmY7s7brrrsOPvCBD0A/+tEPUKZMGRhmmGGgQoUK+NGPfgTXXHMN4j7u4x7+AQcx+/rWMoNRAAAAAElFTkSuQmCC)">
+    <div id="root" class="container">
+        <div class="header">
+            <div class="float-l">
+                <span class="icon-cardLogo"></span>
+            </div>
+            <div class="float-r">
+                <div class="font-s22 float-l"><span class="h_big">个人网上</span><span class="h_mbig">支付系统</span></div>
+                <div class="float-r">
+                    <p>日期:<span id="date"></span><span id="xq"></span></p>
+                    <p><a href="http://www.ulinkpay.com/">通联商务官方网站</a><span class="margin-l-r10">|</span><a class="guanzuwei"><span class="icon-wxtb"></span>关注公众号，在线提问<span class="QR-img"><span class="icon-wechat"></span></span></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="float-l">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><span class="dingdan_icon"><span class="icon-dingdan"></span></span>订单信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div>
+                            <span>订单金额 :</span><span id="totalNum">8000.00元</span>
+                        </div>
+                        <div>
+                            <span>支付货币 :</span><span>人民币</span>
+                        </div>
+                        <div>
+                            <span>商户名称 :</span><span id="commodityName">测试汇分期商户</span>
+                        </div>
+                        <div>
+                            <span class="letter-s">订单号:</span><span id="orderNum">201609300854353809</span>
+                        </div>
+                        <div>
+                            <span>订单日期 :</span><span id="payDate">2016-09-30 08:54:35 </span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="icon-banner"></span>
+                </div>
+            </div>
+            <div class="float-r">
+                <ul class="nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="http://wxtest.ulinkpay.com/assetbm/installment/pcinctallment/installmentPayment.jsp?orderId=LwLpFWLhDeYuwl8QKY%2F8OLdRh4QqqfwL%0D%0A&amp;sign=NGNjOTA2N2UzOGQwYTgwYTdjMWIzYWUyZjIxNDVjNmI%3D#home" aria-controls="home" role="tab" data-toggle="tab">通联卡支付</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="cardInfo-header">
+                            <span> <span class="badge checked">1</span> 还款测算</span> &gt; <span> <span class="badge">2</span> 填写信息</span> &gt; <span> <span class="badge">3</span> 完成</span>
+                        </div>
+                        <div id="countBox">
+                            <div class="row firstRow">
+                                <span class="title">分期期数:</span>
+                                <div id="stageNumberBox" hidden="hidden" class="weui_cell_ft">
+                                    <input readonly="readonly" id="ra" data-array="{&#39;10&#39;:&#39;9&#39;,&#39;10low&#39;:&#39;600&#39;,&#39;10up&#39;:&#39;20000&#39;,&#39;12&#39;:&#39;8&#39;,&#39;12low&#39;:&#39;600&#39;,&#39;12up&#39;:&#39;25000&#39;,&#39;3&#39;:&#39;12.26&#39;,&#39;3low&#39;:&#39;5&#39;,&#39;3up&#39;:&#39;599&#39;,&#39;6&#39;:&#39;8.05&#39;,&#39;6low&#39;:&#39;1000&#39;,&#39;6up&#39;:&#39;15000&#39;}" name="rate" value="6">
+                                </div>
+                                <select id="rateSelect">
+                                    <option value="12.26">3期</option>
+                                    <option value="8.05" selected="true">6期</option>
+                                    <option value="9">10期</option>
+                                    <option value="8">12期</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <span class="title">每期手续费率:</span>
+                                <span class="info" id="eachRate">1.34%</span>
+                                <span>元</span>
+                            </div>
+                            <div class="row">
+                                <span class="title">每期手续费:</span>
+                                <span class="info" id="eachFeeNum">107.33</span>
+                                <span>元</span>
+                            </div>
+                            <div class="row">
+                                <span class="title">每期还款金额:</span>
+                                <span class="info" id="eachMoney">1440.66</span>
+                                <span>元</span>
+                            </div>
+                            <div class="row">
+                                <span class="title">总手续费:</span>
+                                <span class="info" id="allFeeNum">644.00</span>
+                                <span>元</span>
+                            </div>
+                            <div class="row">
+                                <span class="title">分期总额:</span>
+                                <span class="info" id="countMoney">8644.00</span>
+                                <span>元</span>
+                            </div>
+                            <div class="nextBox">
+                                <button id="toFill">下一步</button>
+                            </div>
+                        </div>
+                        <div id="cardInfo" class="hide cardInfo demoform">
+                            <table width="500" style="table-layout:fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td width="150" class="tar"><span class="need">*</span>姓名：</td>
+                                        <td width="200">
+                                            <input id="userName" class="inputNum" type="text" value="可可" placeholder="中文姓名" datatype="zh2-15" errormsg="请输入2到8个中文字符" readonly="readonly">
+                                        </td>
+                                        <td width="150">
+                                            <div class="Validform_checktip">请输入中文姓名</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tar"><span class="need">*</span>身份证：</td>
+                                        <td>
+                                            <input id="userId" maxlength="22" class="inputNum" type="text" value="340603199402064797" placeholder="身份证号" datatype="sfz" errormsg="请输入身份证号">
+                                        </td>
+                                        <td>
+                                            <div class="Validform_checktip">请输入身份证号。</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tar"><span class="need">*</span>信用卡号：</td>
+                                        <td>
+                                            <input maxlength="22" id="creditCard" class="inputNum" type="text" value="6259986239282080" placeholder="信用卡号" datatype="xk16" errormsg="信用卡号错误" readonly="readonly">
+                                        </td>
+                                        <td>
+                                            <div class="Validform_checktip">请输入信用卡号。</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tar"><span class="need">*</span>CVN2：</td>
+                                        <td>
+                                            <input maxlength="3" id="cvn2" class="inputNum" type="number" placeholder="CVN2" datatype="n3-3" errormsg="请输入CVN2">
+                                        </td>
+                                        <td>
+                                            <div class="Validform_checktip">请输入CVN2。</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tar"><span class="need">*</span>有效期：</td>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="input-group date form_month" data-date="102/16" data-date-format="mm/yy" data-date-viewmode="years" data-date-minviewmode="moths">
+                                                    <input id="dateInput" class="form-control" size="16" type="text" value="" readonly="">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </div>
+                                                <input type="hidden" id="dtp_input2" value="">
+                                            </div>
+                                            <!-- 
+                                                <input id="timeNum" type="text" datatype="n6-6" errormsg="请输入有效期" class="inputNum" placeholder="有效期">
+                                             -->
+                                        </td>
+                                        <td>
+                                            <div id="timeCheckTip" class="Validform_checktip">请输入有效期</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tar"><span class="need">*</span>银行预留手机号：</td>
+                                        <td>
+                                            <input maxlength="15" id="userPhone" value="17073547336" class="inputNum" type="text" placeholder="手机号" datatype="sjh" errormsg="请输入手机号">
+                                        </td>
+                                        <td>
+                                            <div class="Validform_checktip">请输入手机号。</div>
+                                        </td>
+                                    </tr>
+                                    <tr class="mh">
+                                        <!--</tr>
+                                            <tr> -->
+                                        <td class="tar"><span class="need">*</span>验证码：</td>
+                                        <td>
+                                            <input id="verifyCode" class="inputNum" type="text" placeholder="验证码" datatype="n4-4" errormsg="请输入验证码">
+                                            <button id="vCodeButton">获取短信验证码</button>
+                                        </td>
+                                        <td>
+                                            <div class="Validform_checktip">请输入验证码。</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="hidden" name="orderId" id="orderId" value="LwLpFWLhDeYuwl8QKY/8OLdRh4QqqfwL
+">
+                            <input type="hidden" name="signs" id="signs" value="NGNjOTA2N2UzOGQwYTgwYTdjMWIzYWUyZjIxNDVjNmI=">
+                            <input type="hidden" name="urlrerurn" id="urlrerurn" value="null">
+                            <input type="hidden" name="state" id="state" value="0">
+                            <input type="hidden" name="onlyData" id="onlyData" value="creditNo,creditName">
+                            <div class="paydiv">
+                                <button id="sureButton">确认支付</button>
+                            </div>
+                        </div>
+                        <div id="paySucceed" class="hide">
+                            <p class="font-s20">
+                                <span class="icon-chenggong"></span> <span id="payFinally">您已成功付款</span>
+                                <span id="paySucceedNum">285.00<span>元</span></span>
+                            </p>
+                            <p class="tishu-color9">该页面将在<span id="countdown10">10</span>秒后自动跳转到商城首页</p>
+                            <p><a href="http://wxtest.ulinkpay.com/assetbm/installment/pcinctallment/installmentPayment.jsp?orderId=LwLpFWLhDeYuwl8QKY%2F8OLdRh4QqqfwL%0D%0A&amp;sign=NGNjOTA2N2UzOGQwYTgwYTdjMWIzYWUyZjIxNDVjNmI%3D#">返回商城</a></p>
+                        </div>
+                    </div>
+                    <div class="content-tishu">
+                        <p><span><span class="icon-tishu"></span></span><span>支付小贴士</span></p>
+                        <ol>
+                            <li>无需注册网银即可使用卡密支付，方便快捷。</li>
+                            <li>您正在进行网络支付交易，为保证您的资金安全，请认真核对交易信息，谨防诈骗。</li>
+                            <li>请不要在网吧等公共场所使用本功能，妥善保管好您的卡号和密码，避免被他人冒用。</li>
+                            <li>通联商务提供安全可靠的网上支付服务，一切由于商品质量、送货服务等引起的争议均有客户及商户自行协调解决。</li>
+                            <li>客服服务热线：4009-216-118 ( 工作日 9:00 - 17:00 )</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="yujizaitu"></div>
+        <div id="root_footer"></div>
+    </div>
+    <div id="footer">
+        <div><span>公司地址：上海市浦东新区杨高南路799号陆家嘴世纪金融广场3号楼8层</span></div>
+        <p><span>版权所有：通联商务服务有限公司</span><span>沪ICP备13043030号-1</span></p>
+    </div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+    <div id="aboutMoal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div id="loding" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="./installmentPayment2_files/loding.gif">
+                    <p>该笔订单支付中...</p>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <script type="text/javascript" src="./installmentPayment2_files/urlVar.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/bootstrap4.0.0.min.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/Validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/common.js"></script>
+    <script type="text/javascript" src="./installmentPayment2_files/installmentPayment.min.js"></script>
+    <div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 0px; z-index: 1060;">
+        <div class="datetimepicker-minutes" style="display: none;">
+            <table class=" table-condensed">
+                <thead>
+                    <tr>
+                        <th class="prev" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-left"></span> </th>
+                        <th colspan="5" class="switch">30 九月 2016</th>
+                        <th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7"><span class="minute disabled">8:00</span><span class="minute disabled">8:05</span><span class="minute disabled">8:10</span><span class="minute disabled">8:15</span><span class="minute disabled">8:20</span><span class="minute disabled">8:25</span><span class="minute disabled">8:30</span><span class="minute disabled">8:35</span><span class="minute disabled">8:40</span><span class="minute disabled">8:45</span><span class="minute disabled">8:50</span><span class="minute">8:55</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7" class="today" style="display: none;">今天</th>
+                    </tr>
+                    <tr>
+                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="datetimepicker-hours" style="display: none;">
+            <table class=" table-condensed">
+                <thead>
+                    <tr>
+                        <th class="prev" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-left"></span> </th>
+                        <th colspan="5" class="switch">30 九月 2016</th>
+                        <th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7"><span class="hour disabled">0:00</span><span class="hour disabled">1:00</span><span class="hour disabled">2:00</span><span class="hour disabled">3:00</span><span class="hour disabled">4:00</span><span class="hour disabled">5:00</span><span class="hour disabled">6:00</span><span class="hour disabled">7:00</span><span class="hour active">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour">22:00</span><span class="hour">23:00</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7" class="today" style="display: none;">今天</th>
+                    </tr>
+                    <tr>
+                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="datetimepicker-days" style="display: none;">
+            <table class=" table-condensed">
+                <thead>
+                    <tr>
+                        <th class="prev" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-left"></span> </th>
+                        <th colspan="5" class="switch">九月 2016</th>
+                        <th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th>
+                    </tr>
+                    <tr>
+                        <th class="dow">一</th>
+                        <th class="dow">二</th>
+                        <th class="dow">三</th>
+                        <th class="dow">四</th>
+                        <th class="dow">五</th>
+                        <th class="dow">六</th>
+                        <th class="dow">日</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="day old disabled">29</td>
+                        <td class="day old disabled">30</td>
+                        <td class="day old disabled">31</td>
+                        <td class="day disabled">1</td>
+                        <td class="day disabled">2</td>
+                        <td class="day disabled">3</td>
+                        <td class="day disabled">4</td>
+                    </tr>
+                    <tr>
+                        <td class="day disabled">5</td>
+                        <td class="day disabled">6</td>
+                        <td class="day disabled">7</td>
+                        <td class="day disabled">8</td>
+                        <td class="day disabled">9</td>
+                        <td class="day disabled">10</td>
+                        <td class="day disabled">11</td>
+                    </tr>
+                    <tr>
+                        <td class="day disabled">12</td>
+                        <td class="day disabled">13</td>
+                        <td class="day disabled">14</td>
+                        <td class="day disabled">15</td>
+                        <td class="day disabled">16</td>
+                        <td class="day disabled">17</td>
+                        <td class="day disabled">18</td>
+                    </tr>
+                    <tr>
+                        <td class="day disabled">19</td>
+                        <td class="day disabled">20</td>
+                        <td class="day disabled">21</td>
+                        <td class="day disabled">22</td>
+                        <td class="day disabled">23</td>
+                        <td class="day disabled">24</td>
+                        <td class="day disabled">25</td>
+                    </tr>
+                    <tr>
+                        <td class="day disabled">26</td>
+                        <td class="day disabled">27</td>
+                        <td class="day disabled">28</td>
+                        <td class="day disabled">29</td>
+                        <td class="day">30</td>
+                        <td class="day new">1</td>
+                        <td class="day new">2</td>
+                    </tr>
+                    <tr>
+                        <td class="day new">3</td>
+                        <td class="day new">4</td>
+                        <td class="day new">5</td>
+                        <td class="day new">6</td>
+                        <td class="day new">7</td>
+                        <td class="day new">8</td>
+                        <td class="day new">9</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7" class="today" style="display: none;">今天</th>
+                    </tr>
+                    <tr>
+                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="datetimepicker-months" style="display: block;">
+            <table class="table-condensed">
+                <thead>
+                    <tr>
+                        <th class="prev" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-left disabled"></span> </th>
+                        <th colspan="5" class="switch">2016</th>
+                        <th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right disabled"></span> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7"><span class="month disabled">一月</span><span class="month disabled">二月</span><span class="month disabled">三月</span><span class="month disabled">四月</span><span class="month disabled">五月</span><span class="month active disabled">六月</span><span class="month">七月</span><span class="month">八月</span><span class="month">九月</span><span class="month">十月</span><span class="month">十一月</span><span class="month">十二月</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7" class="today" style="display: none;">今天</th>
+                    </tr>
+                    <tr>
+                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="datetimepicker-years" style="display: none;">
+            <table class="table-condensed">
+                <thead>
+                    <tr>
+                        <th class="prev" style="visibility: hidden;"><span class="glyphicon glyphicon-arrow-left"></span> </th>
+                        <th colspan="5" class="switch">2010-2019</th>
+                        <th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="7"><span class="year old disabled">2009</span><span class="year disabled">2010</span><span class="year disabled">2011</span><span class="year disabled">2012</span><span class="year disabled">2013</span><span class="year disabled">2014</span><span class="year disabled">2015</span><span class="year active">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="7" class="today" style="display: none;">今天</th>
+                    </tr>
+                    <tr>
+                        <th colspan="7" class="clear" style="display: none;">Clear</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

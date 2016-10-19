@@ -1,0 +1,300 @@
+@CHARSET "UTF-8";
+
+body {
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	font-family: Verdana, Arial,Vrinda,Tahoma;
+	line-height: 175%;
+	font-size:12px;
+}
+/* link color */
+a,a:link {color: #006699; text-decoration:none;}
+a:visited {color: #006699;text-decoration:none;}
+a:hover {color: #bc2931; text-decoration:underline;}
+a:active {color: #bc2931;}
+
+.return-bar{height: 30px; text-align: right;}
+.return-bar a{background-color: #1882be;height: 20px; line-height: 20px;border-radius: 12px;padding: 3px 12px;color: white;}
+.return-bar a:hover{background-color: #eb6100;color: white;}
+
+img {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	display:inline;
+}
+ul{
+    margin:0;
+	padding:0;
+	list-style-position: outside;
+	list-style-type: none;
+}
+li{
+	margin:0;
+	padding:0;
+}
+div{
+	margin:0;
+	padding:0;
+}
+
+/* top frame begin */
+.maintop{
+	margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+	background:#FFFFFF;	
+	height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 150%;
+	color:#000000;   /*#666666*/
+
+}
+#divtop{
+	padding:0px;
+	background-color:#1487c0;
+	background-repeat:repeat-x;
+	height:60px;
+	
+}
+
+#divtopB{
+	background-image:url(../images/head_bg_line.gif); 
+	background-repeat:repeat-x;
+	height:12px;
+}
+
+/* top frame end */
+
+#switchpic {
+	width: 6px;
+	cursor:pointer;
+	clear: both;
+	vertical-align: bottom;
+	margin-top: 0px;
+}
+
+
+/* Styles for man_zone  */
+#man_zone {
+	width: 100%;
+	border: 1px solid #d0d0bf;
+	margin: 8 0 0 0;
+	padding: 0px 0 5px 0;
+	overflow: auto;
+}
+
+.man_zone_title{
+background-color:#e9edf7;
+}
+
+.man_zone_subtitle{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #c9d8fc;
+	margin-left:18px;
+	margin-right:18px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#man_zone table{
+    background-color:#FFFFFF;
+}
+#man_zone table tr{
+    background-color:#FFFFFF;
+}
+
+.h2-single {
+	padding: 5px 0px 5px 15px;
+	font-size: 12px;
+	font-weight:normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #C9D8FC;
+}
+
+.h2-subtitle {
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:2px;
+	font-size: 13px;
+	color:#333333;
+	font-weight:normal;
+	background-color: #e9edf7;
+}
+
+.operatingTip {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.ftoggle {
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+}
+
+
+
+/* for login html: begin */
+
+.login-buttom-bg {
+	background-image: url(../images/login-buttom-bg.gif);
+	background-repeat: repeat-x;
+	width:80%;
+}
+.login-buttom-txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ABCAD3;
+}
+
+.login_txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #333333;
+}
+.Submit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #629DAE;
+	text-decoration: none;
+	background-image: url(../images/Submit_bg.gif);
+	background-repeat: repeat-x;
+}
+.login_bg {
+	background-image: url(../images/login_bg.jpg);
+	background-repeat: repeat-x;
+}
+.login_bg2 {
+	background-image: url(../images/login-content-bg.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.login_txt_bt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+	color: #666666;
+	font-weight: bold;
+}
+
+
+.left_txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #666666;
+}
+
+.left_txt3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #003366;
+	text-decoration: none;
+}
+/* for login html: end */
+
+/* for button: <input type=submit class=stdButton /> */
+.stdButton {
+	background-color:buttonface;
+	border:1px solid #CCCCCC;
+	cursor:pointer;
+	font-family:Verdana;
+	font-size:9pt;
+	height:22px;
+}
+
+/* wwFormTable */
+.wwFormTable {
+	border-collapse:collapse;
+	width:100%;
+	margin:0px; 
+}
+
+.wwFormTable .tdLabel{   
+	border:0px solid #CCC;
+	height: 30px;
+	width: 150px;
+	text-align: right;
+	padding-right: 5px;
+	font-size:12px;
+	font-weight: normal;
+}
+.wwFormTable .tdLabel_1{   
+	border:0px solid #CCC;
+	height: 30px;
+	width: 80px;
+	text-align: right;
+	padding-right: 5px;
+	font-size:12px;
+	font-weight: normal;
+}
+.wwFormTable td{   
+	border:0px solid #CCC;
+	padding-left: 7px;
+}
+
+.wwFormTable span.required{   
+	color:red;
+	font-weight:bold;
+}
+
+/* END formTable */
+
+/* queryPanel for list.jsp */
+.queryPanel .tdLabel{
+	text-align: right;
+	font-size:12px;
+	font-weight: normal;
+	padding:8px;
+}
+
+.handleControl{
+	text-align: right;
+	margin-top:8px;
+}
+
+.commonButton{
+	border: 1px solid #4e9cf9;
+	padding:3px 2px 1px 2px;
+	background-image:url(../images/button_bg.gif);
+	color:#FFFFFF;
+	font-size:12px;
+}
+
+/* Messages */
+div.error, div.message {
+	background: url(../images/question.png) no-repeat 25px 5px;
+	margin: 0px 8px 15px 8px;
+	padding: 6px  20px 4px 55px;
+}
+
+/* END Messages */
+
+/* begin toggle */
+.tool-toggle {
+	display: block; background: url(../images/toggle_bg.gif) no-repeat 0px -80px; margin: 0px auto; width: 685px; text-indent: -999px; height: 20px; outline: none
+}
+.tool-toggle:hover {
+	background-position: 0px -120px
+}
+.collapsed-tool-toggle {
+	background-position: 0px 0px
+}
+.collapsed-tool-toggle:hover {
+	background-position: 0px -40px
+}
+/* end toggle */
+
+
+
+

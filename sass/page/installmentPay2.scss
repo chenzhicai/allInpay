@@ -1,0 +1,12 @@
+@charset "utf-8";
+// Reset and dependencies
+@import "../vendors/bootstrap/normalize";
+@import "../components/icons";
+@import "../layout/_installmentPay2_header";
+@import "../layout/_content_left";
+@import "../layout/_content_right";
+
+.container{
+    width: 1024px;
+    padding: 0px;
+}

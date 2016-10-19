@@ -17,14 +17,15 @@ var QueryString = {
 }
 
 
-function getUrlAjax(url, param, successCallBack,errorCallBack) {
+function getUrlAjax(url, param, successCallBack,errorCallBack,isAsync) {
+    var isAsync = isAsync?isAsync:false;
     $.ajax({
         type: 'post',
         dataType: "json",
         url: url,
         data: param,
         cache: false,
-        async: false,
+        async: isAsync,
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",
         success: successCallBack,
         error: errorCallBack

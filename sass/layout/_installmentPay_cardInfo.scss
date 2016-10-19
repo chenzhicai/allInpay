@@ -5,22 +5,33 @@
         width: 195px;
     }
     #verifyCode {
-        width: 93px;
+        width: 84px;
     }
     #dateInput{
         width: 156px;
     }
     #vCodeButton {
-        line-height: 23px;
+        line-height: 21px;
+        width: 105px;
+        font-size: 14px;
+        padding: 1px 0px;
+        border: 1px solid #ccc;
     }
+    input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{ -webkit-appearance: none !important; margin: 0; }
+    input[type="number"]{-moz-appearance:textfield;} 
 }
 
 .tar {
     text-align: right;
 }
 
+input[readonly=readonly]{
+    color: #6d6c6c;
+    background: #e6e6e6;
+}
+
 #cardInfo {
-    padding-left: 7%;
+    padding-left: 1%;
     padding-top: 3px;
 }
 
@@ -45,7 +56,7 @@
 }
 
 .tab-content {
-    height: 385px;
+    height: 430px;
     td,
     th {
         padding: 3px;
@@ -53,4 +64,24 @@
     .form-group {
         margin-bottom: 3px;
     }
+}
+#loding{
+    .modal-dialog{
+        width: 216px;
+        margin-left: -108px;
+    }
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    margin-left: -255px;
+  }
+}
+
+.Validform_wrong{
+    padding-left: 0px;
+}
+
+input{
+    border-width: 1px;
 }

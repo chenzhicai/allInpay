@@ -32,6 +32,10 @@ function showPaySucceed(payNum) {
 
 /* 设置成功提示 */
 function setSucceedContent() {
+    var scUrl = $("#urlrerurn").val();
+    if(scUrl == "null" || scUrl == ""){
+        $("#paySucceed p:gt(0)").hide();
+    }
     $("#paySucceed .icon-fail").removeClass("icon-fail").addClass("icon-chenggong");
     $("#payFinally").text("您已成功付款");
     $("#payFinally+span").show();

@@ -1,0 +1,8 @@
+.content>.float-l{
+    float: left;
+    display: inline-block;
+    width: 290px;
+    .panel-heading{
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%,from(#00589b), to(#138be8));
+    }
+}

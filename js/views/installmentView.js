@@ -43,7 +43,12 @@ function showPaySucceed(payNum) {
 
 /* 设置成功提示 */
 function setSucceedContent() {
+    var scUrl = $("#urlrerurn").val();
+    if (scUrl == "null" || scUrl == "") {
+        $("#paySucceed p:gt(0)").hide();
+    }
     $("#paySucceed .icon-fail").removeClass("icon-fail").addClass("icon-chenggong");
+//    $("#paySucceedNum").text($("#countMoney").text());
     $("#payFinally").text("您已成功付款");
     $("#payFinally+span").show();
     showPaySucceed();
@@ -77,43 +82,24 @@ function countdownFun(argument) {
         if (cardNum == 0) {
             location.href = $("#paySucceed a").attr("href");
             clearInterval(setIntervalObje);
+            var scUrl = $("#urlrerurn").val();
+            if (scUrl && scUrl != "null" && scUrl != "") {
+              location.href = $("#urlrerurn").val();  
+            }
+            
         };
     }, 1000)
 }
 
 /* 展示错误提示框 */
-function showErroPrompt(promptCode) {
-    var promptHTML = '';
-    cardNum
-    if (promptCode == "cardNum") {
-        promptHTML = '<p>请输入正确卡号。</p>';
-    } else if (promptCode == "cardPassword") {
-        promptHTML = '<p>请输入6位密码。</p>';
-    } else if (promptCode == "verifyCodeErro") {
-        promptHTML = '<p>请输入4位验证码。</p>';
-    } else if (promptCode == "1118") {
-        promptHTML = '<p>卡号不存在，请重新输入。</p>';
-    } else if (promptCode == "1041") {
-        promptHTML = '<p>密码错误，请重新输入。</p>';
+function showErroPrompt(msg) {
+    var promptHTML = '<p>' + msg + '</p>';
 
-        //   $("#cardPassword").val("");
-    } else if (promptCode == "60") {
-
-    } else if (promptCode == "60") {
-        promptHTML = '<p>验证码错误,请输入正确验证码</p>';
-    } else if (promptCode == "1039") {
-        promptHTML = '<p>密码超过日限制</p>';
-    } else if (promptCode == "50") {
-        promptHTML = '<p>单号不存在</p>';
-    } else if (promptCode == "1073") {
-        promptHTML = '<p>卡内余额不足，請充值</p>';
-    }
     $('#aboutMoal h4').text("提示");
     $('#aboutMoal .modal-body').html(promptHTML);
     $('#aboutMoal modal-footer > button').text('确定');
     $('#aboutMoal').modal('show');
-    $('#verifyCode').val("").focus();
-    refreshCaptcha();
+
 }
 
 /* 输入框输入去掉提示颜色 */
@@ -123,47 +109,60 @@ function changeInputColor($input) {
     }
 }
 
+// 初始化格式
+function initSpace() {
+    if ($("#creditCard").val() != "") {
+        spaceCardNum();
+    }
+    if ($("#userId").val() != "") {
+        spaceuserId($("#userId"));
+    }
+    if ($("#userPhone").val() != "") {
+        spacePhoneNum($("#userPhone"));
+    }
+}
+
 
 /* 间隔信用卡号 */
 function spaceCardNum() {
     $creditCard = $("#creditCard"),
         creditCardVal = $creditCard.val(),
         needCardVal = $creditCard.val().replace(/ /g, "");
-    if (needCardVal.length == 5) {
+    if (needCardVal.length > 4 && needCardVal.length < 9) {
         creditCardVal = needCardVal.substr(0, 4) + "  " + needCardVal.substr(4);
         $creditCard.val(creditCardVal);
-    } else if (needCardVal.length == 9) {
+    } else if (needCardVal.length > 8 && needCardVal.length < 13) {
         creditCardVal = needCardVal.substr(0, 4) + "  " + needCardVal.substr(4, 4) + "  " + needCardVal.substr(8);
         $creditCard.val(creditCardVal);
-    } else if (needCardVal.length == 13) {
+    } else if (needCardVal.length > 13 && needCardVal.length < 17) {
         creditCardVal = needCardVal.substr(0, 4) + "  " + needCardVal.substr(4, 4) + "  " + needCardVal.substr(8, 4) + "  " + needCardVal.substr(12);
         $creditCard.val(creditCardVal);
     }
-    
+
 }
 
 /* 间隔身份证号 */
 function spaceuserId($userId) {
     var userIdVal = $userId.val(),
         needUserIdVal = $userId.val().replace(/ /g, "");
-    if (needUserIdVal.length == 7) {
+    if (needUserIdVal.length > 7 && needUserIdVal.length < 15) {
         userIdVal = needUserIdVal.substr(0, 6) + "  " + needUserIdVal.substr(6);
         $userId.val(userIdVal);
-    } else if (needUserIdVal.length == 15) {
+    } else if (needUserIdVal.length > 14) {
         userIdVal = needUserIdVal.substr(0, 6) + "  " + needUserIdVal.substr(6, 8) + "  " + needUserIdVal.substr(14);
         $userId.val(userIdVal);
     }
-    
+
 }
 
 /* 间隔手机号 */
 function spacePhoneNum($userPhone) {
     var userPhoneVal = $userPhone.val(),
         needPhoneVal = $userPhone.val().replace(/ /g, "");
-    if (needPhoneVal.length == 4) {
+    if (needPhoneVal.length > 3 && needPhoneVal.length < 9) {
         userPhoneVal = needPhoneVal.substr(0, 3) + "  " + needPhoneVal.substr(3);
 
-    } else if (needPhoneVal.length == 8) {
+    } else if (needPhoneVal.length > 8) {
         userPhoneVal = needPhoneVal.substr(0, 3) + "  " + needPhoneVal.substr(3, 4) + "  " + needPhoneVal.substr(7);
     }
     $userPhone.val(userPhoneVal);
@@ -174,9 +173,9 @@ function initValidform() {
     return $(".demoform").Validform({
         tiptype: 2,
         datatype: {
-            "zh2-15": /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,15}$/,
+            "zh2-15": /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,8}$/,
             "xk16": /[0-9]{4}\s\s[0-9]{4}\s\s[0-9]{4}\s\s[0-9]{4}$/,
-            "sfz": /[0-9]{6}\s\s[0-9]{8}\s\s[0-9]{3}[0-9Xx]$/,
+            "sfz": /[0-9]{6}\s\s[0-9]{8}\s\s[0-9]{3}[0-9Xx]$|[0-9]{6}\s\s[0-9]{8}\s\s[0-9]{1}$/,
             "sjh": /[0-9]{3}\s\s[0-9]{4}\s\s[0-9]{4}$/
         }
     });
@@ -258,5 +257,6 @@ module.exports = {
     spaceuserId: spaceuserId,
     spacePhoneNum: spacePhoneNum,
     initValidform: initValidform,
-    setDatetimepicker: setDatetimepicker
+    setDatetimepicker: setDatetimepicker,
+    initSpace: initSpace
 }

@@ -9,7 +9,7 @@
         vertical-align: super;
         text-align: center;
         vertical-align: top;
-        >p:last-child{
+        >p:last-child {
             font-size: 18px;
         }
     }
@@ -17,8 +17,61 @@
         display: inline-block;
         font-size: 22px;
     }
-    img{
+    img {
         vertical-align: bottom;
         margin-right: 20px;
     }
+}
+
+.icheckbox-blue.checked {
+    background-position: -48px 0;
+}
+
+.icheckbox-blue {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    background: url(../images/blue@2x.png) no-repeat;
+    background-size: 70px 24px;
+    border: none;
+    cursor: pointer;
+    -moz-transform: scale(0.82);
+    -webkit-transform: scale(0.82);
+    -o-transform: scale(0.82);
+}
+
+#checkButton {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#agreement-box {
+    text-align: center;
+    margin: 12px 0;
+}
+
+#myModal {
+    .modal-dialog {
+        width: 70%;
+        margin-left: -35%;
+        margin-top: 30px;
+        iframe {
+            width: 100%;
+            border: 0px;
+            height: 100%;
+        }
+    }
+    .modal-body {
+        height: 450px;
+        padding: 0px;
+    }
+}
+
+#commodityNameBox {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
 }

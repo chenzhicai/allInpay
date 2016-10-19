@@ -435,9 +435,10 @@ html, body {
   top: 65px;
   z-index: 9999;
   margin-left: 170px;
+  display: none;
 }
 
-/* line 93, ../../sass/layout/_peronalPayHeader.scss */
+/* line 94, ../../sass/layout/_peronalPayHeader.scss */
 .icon-wechat {
   width: 84px;
   height: 84px;
@@ -445,7 +446,7 @@ html, body {
   vertical-align: middle;
 }
 
-/* line 99, ../../sass/layout/_peronalPayHeader.scss */
+/* line 100, ../../sass/layout/_peronalPayHeader.scss */
 .margin-l-r10 {
   margin: 0px 10px;
 }
@@ -788,7 +789,7 @@ html, body {
   -moz-border-radius-bottomleft: 4px;
   -webkit-border-bottom-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  margin-top: -1px;
+  margin-top: 14px;
   height: 298px;
 }
 
@@ -996,34 +997,33 @@ html, body {
   border-radius: 4px / 4px;
   line-height: 25px;
   width: 90px;
-  margin-left: -80px;
   margin-top: 20px;
 }
 
-/* line 290, ../../sass/layout/_peronalPayContent.scss */
+/* line 289, ../../sass/layout/_peronalPayContent.scss */
 #aboutMoal .modal-body {
   text-align: center;
   margin: auto;
 }
 
-/* line 294, ../../sass/layout/_peronalPayContent.scss */
+/* line 293, ../../sass/layout/_peronalPayContent.scss */
 .modal-header {
   background-color: #eeeeee;
 }
 
-/* line 297, ../../sass/layout/_peronalPayContent.scss */
+/* line 296, ../../sass/layout/_peronalPayContent.scss */
 .modal-header button {
   display: inline-block;
   float: right;
 }
 
-/* line 301, ../../sass/layout/_peronalPayContent.scss */
+/* line 300, ../../sass/layout/_peronalPayContent.scss */
 .modal-footer button {
   border-color: #ccc;
   padding: 2px 10px;
 }
 
-/* line 311, ../../sass/layout/_peronalPayContent.scss */
+/* line 310, ../../sass/layout/_peronalPayContent.scss */
 .content-tishu {
   border: 1px solid #A6C0D6;
   margin-top: 20px;
@@ -1034,7 +1034,7 @@ html, body {
   border-radius: 4px / 4px;
 }
 
-/* line 322, ../../sass/layout/_peronalPayContent.scss */
+/* line 321, ../../sass/layout/_peronalPayContent.scss */
 .icon-tishu {
   width: 20px;
   height: 20px;
@@ -1043,12 +1043,12 @@ html, body {
   vertical-align: middle;
 }
 
-/* line 328, ../../sass/layout/_peronalPayContent.scss */
+/* line 327, ../../sass/layout/_peronalPayContent.scss */
 .hide {
   display: none;
 }
 
-/* line 331, ../../sass/layout/_peronalPayContent.scss */
+/* line 330, ../../sass/layout/_peronalPayContent.scss */
 .show {
   display: block;
 }
@@ -1199,6 +1199,65 @@ html, body {
 #tishicuowu img {
   vertical-align: bottom;
   margin-right: 20px;
+}
+
+/* line 26, ../../sass/layout/_payPrompt_content.scss */
+.icheckbox-blue.checked {
+  background-position: -48px 0;
+}
+
+/* line 30, ../../sass/layout/_payPrompt_content.scss */
+.icheckbox-blue {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: url(../images/blue@2x.png) no-repeat;
+  background-size: 70px 24px;
+  border: none;
+  cursor: pointer;
+  -moz-transform: scale(0.82);
+  -webkit-transform: scale(0.82);
+  -o-transform: scale(0.82);
+}
+
+/* line 46, ../../sass/layout/_payPrompt_content.scss */
+#checkButton {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 51, ../../sass/layout/_payPrompt_content.scss */
+#agreement-box {
+  text-align: center;
+  margin: 12px 0;
+}
+
+/* line 57, ../../sass/layout/_payPrompt_content.scss */
+#myModal .modal-dialog {
+  width: 70%;
+  margin-left: -35%;
+  margin-top: 30px;
+}
+/* line 61, ../../sass/layout/_payPrompt_content.scss */
+#myModal .modal-dialog iframe {
+  width: 100%;
+  border: 0px;
+  height: 100%;
+}
+/* line 67, ../../sass/layout/_payPrompt_content.scss */
+#myModal .modal-body {
+  height: 450px;
+  padding: 0px;
+}
+
+/* line 73, ../../sass/layout/_payPrompt_content.scss */
+#commodityNameBox {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* line 16, ../../sass/page/peronalPay.scss */
